@@ -53,8 +53,8 @@ body {
     padding: 20px;
 }
 
+/* Main Menu */
 .sidebar .menu-top ul.main-menu {
-
     line-height: 35px;
 }
 
@@ -116,3 +116,4 @@ footer.commands {
     height: 100px;
 }
 
+/* Debug */
