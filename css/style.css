@@ -3,3 +3,50 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
+
+/* Generali */
+
+
+/* Wrapper */
+.wrapper{
+    width: 100%;
+    height: 100vh;
+  
+}
+
+/* /Generali */
+
+/* Main */
+
+/* Sidebar */
+
+.sidebar{
+    min-height: 90vh;
+    max-width: 15vw;
+ 
+}
+
+/* /Sidebar */
+
+/* Main content */
+
+.main-content{
+    min-width: 85vw;
+    min-height: 90vh;
+    
+    float: left;
+}
+
+/* /Main content */
+
+/* /Main */
+/* Debug */
+
+.debug .wrapper{
+    background-color: black;
+}
+
+.debug .sidebar{
+    background-color: gray;
+}
+
