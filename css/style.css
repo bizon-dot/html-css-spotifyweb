@@ -10,6 +10,13 @@ main{
     height: calc(100% - 100px);
 }
 
+body {
+	font-family: 'Montserrat', sans-serif;
+	color: rgb(255, 255, 255);
+}
+
+
+
 .clearfix{
     content:"";
     display: table;
@@ -37,6 +44,7 @@ main{
 .sidebar-top{
     display:flex;
     flex-direction: column;
+    height: calc(100% - 100px);
 }
 
 /* Ridimensiono il logo */
@@ -44,6 +52,32 @@ main{
     width:70%;
     padding: 20px;
 }
+
+.sidebar .menu-top ul.main-menu {
+
+    line-height: 35px;
+}
+
+.sidebar .menu-top ul.main-menu li {
+    padding-left:20px;
+}
+
+
+.sidebar .menu-top ul.main-menu a {
+    text-decoration:none;
+    font-size:18px;
+    color: rgba(255, 255, 255, 0.5);
+    
+}
+
+.sidebar .menu-top ul.main-menu a img{
+    height: 26px;
+    margin-right: 5px;
+    opacity: 0.6;
+    vertical-align: middle;
+}
+
+
 
 /* /Sidebar */
 
@@ -75,5 +109,10 @@ footer.commands {
 
 .debug .sidebar{
     background-color: #121212;
+}
+
+.debug .sidebar-bottom{
+    background-color: red;
+    height: 100px;
 }
 
