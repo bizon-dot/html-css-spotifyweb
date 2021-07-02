@@ -15,8 +15,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-
-
 .clearfix {
     content: "";
     display: table;
@@ -78,6 +76,12 @@ aside.sidebar {
     line-height: 35px;
 }
 
+.sidebar .menu-top .playlist ul.playlist-menu{
+    border-top:5px;
+    height: 200px;
+    overflow-y: auto;
+}
+
 .sidebar .menu-top ul.main-menu li,
 .sidebar .menu-top .playlist ul.playlist-menu li {
     padding-left: 20px;
@@ -103,7 +107,8 @@ aside.sidebar {
 
 /* /Icone menu */
 
-.sidebar .menu-top .title {
+.sidebar .menu-top h2.title {
+    color: rgba(255, 255, 255, 0.5);
     padding: 20px;
 }
 
@@ -123,8 +128,9 @@ aside.sidebar {
 
 }
 
-.playlist {
-    min-height: 500px;
+section.playlist {
+    /* min-height: 500px; */
+    overflow: hidden;
 }
 
 #add-playlist {
@@ -162,7 +168,6 @@ a {
     right: 0;
     bottom: 0;
     left: 250px;
-    background: orange;
 
 }
 
