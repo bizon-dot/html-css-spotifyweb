@@ -7,12 +7,12 @@
 /* Generali */
 
 main {
+    /* Sottraggo la dimensione del footer */
     height: calc(100% - 100px);
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 255, 255);
 }
 
 
@@ -25,8 +25,13 @@ body {
 
 /* Wrapper */
 .wrapper {
+    /* width: 100%;
+    height: 100vh; */
+    display: flex;
     width: 100%;
-    height: 100vh;
+    flex-direction: row;
+    height: 100%;
+    min-height: 100vh;
     background-color: black;
 }
 
@@ -35,25 +40,26 @@ body {
 
 /* Sidebar */
 
-.sidebar {
+aside.sidebar {
     width: 250px;
-    min-height: 90vh;
     height: 100%;
-    float: left;
+    position: fixed;
+
 }
 
 .sidebar-top {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* Sottraggo la dimensione del footer */
     height: calc(100% - 100px);
 }
 
-/* Nascondo il logo desktop */
+/* Nascondo il logo desktop di dwfault - MobileFirst*/
 .sidebar-top img.logo-desktop {
     display: none;
 }
 
+/* Logo mobile */
 .sidebar-top logo-mobile {
     display: flex;
 }
@@ -64,7 +70,7 @@ body {
     padding: 20px;
 }
 
-/* Logo mobile / logo desktop */
+/* /Logo mobile */
 
 /* Main Menu */
 .sidebar .menu-top ul.main-menu,
@@ -79,7 +85,7 @@ body {
 
 /* Formattazione testo menu */
 .sidebar .menu-top ul.main-menu a,
-.sidebar .menu-top .playlist ul.playlist-menu a{
+.sidebar .menu-top .playlist ul.playlist-menu a {
     text-decoration: none;
     font-size: 16px;
     word-break: break-all;
@@ -102,34 +108,61 @@ body {
 }
 
 /* Pulsante crea playlist */
-#add-playlist:before{
-    display:inline-block;
+#add-playlist:before {
+    display: inline-block;
     width: 35px;
     height: 35px;
-    content:"+";
+    content: "+";
     font-size: 35px;
-    text-align:center;
+    text-align: center;
     background-color: grey;
     padding: 5px;
     margin-right: 10px;
     line-height: 35px;
     vertical-align: middle;
-    
+
 }
 
-#add-playlist{
-    overflow-y: hidden;
-    margin-left:20px;
-    margin-bottom:10px;
+.playlist {
+    min-height: 500px;
 }
+
+#add-playlist {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* /Sidebar */
 
 /* Main content */
 
+.wrapper-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: 100vh;
+    background: #ccc;
+    position: relative;
+    align-items: stretch;
+}
+
 .content {
     width: calc(100% - 250px);
+    display: block;
+    flex: 1;
     height: 100%;
-    float: left;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 250px;
+    background: orange;
 
 }
 
