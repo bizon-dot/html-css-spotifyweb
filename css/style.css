@@ -23,13 +23,11 @@ body {
 
 /* Wrapper */
 .wrapper {
-    /* width: 100%;
-    height: 100vh; */
     display: flex;
     width: 100%;
     flex-direction: row;
-    height: 100%;
-    min-height: 100vh;
+    height: 90vh;
+    overflow: hidden;
     background-color: black;
 }
 
@@ -40,7 +38,7 @@ body {
 
 aside.sidebar {
     width: 250px;
-    height: 100%;
+    height: calc(100% - 10vh);
     position: fixed;
 
 }
@@ -76,8 +74,8 @@ aside.sidebar {
     line-height: 35px;
 }
 
-.sidebar .menu-top .playlist ul.playlist-menu{
-    border-top:5px;
+.sidebar .menu-top .playlist ul.playlist-menu {
+    margin-top: 20px;
     height: 200px;
     overflow-y: auto;
 }
@@ -98,7 +96,8 @@ aside.sidebar {
 }
 
 /* Icone menu */
-.sidebar .menu-top ul.main-menu a img {
+.sidebar .menu-top ul.main-menu a img,
+.sidebar-bottom > .profile > .avatar > img {
     height: 26px;
     margin-right: 5px;
     opacity: 0.6;
@@ -138,8 +137,42 @@ section.playlist {
     margin-bottom: 10px;
 }
 
-a {
+a#add-playlist {
+    color: white;
     text-decoration: none;
+}
+
+/* Sidebar bottom */
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 35px;
+    padding: 20px;
+}
+
+.sidebar-bottom>.download>a>img {
+    width: 20px;
+    vertical-align: middle;
+ 
+}
+
+.sidebar-bottom>.download>a {
+    /* margin-left: 10px; */
+    color: rgba(255, 255, 255, 0.4);   
+    text-decoration: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+}
+
+.sidebar-bottom > .profile {
+    display:flex;
+    align-items: center;
+}
+
+.sidebar-bottom > .profile > span {
+        color: rgba(255, 255, 255, 0.4);
 }
 
 /* /Sidebar */
@@ -151,18 +184,15 @@ a {
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
-    min-height: 100vh;
-    background: #ccc;
     position: relative;
-    align-items: stretch;
+    /* align-items: stretch; */
 }
 
 .content {
     width: calc(100% - 250px);
     display: block;
     flex: 1;
-    height: 100%;
-    min-height: 100vh;
+    max-height: 90vh;
     position: absolute;
     top: 0;
     right: 0;
@@ -176,8 +206,16 @@ a {
 /* /Main */
 
 /* Footer */
+
+footer {
+    z-index: 999;
+}
+
 footer.commands {
-    height: 10vh;
+    /* height: 100%; */
+    min-height: 10vh;
+    display: flex;
+    flex-shrink: 1;
     background-color: #282828;
 }
 
