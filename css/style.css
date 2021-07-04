@@ -48,7 +48,11 @@ aside.sidebar {
 }
 
 /* Effetto hover: bordo sinistro verde a comparsa, per ogni elemento li nella */
-aside.sidebar li:hover{
+/* aside.sidebar li:not(.no-hover) a:hover{
+    border-left: solid green 2px;
+} */
+
+aside.sidebar li:hover:not(.no-hover) {
     border-left: solid green 2px;
 }
 
@@ -154,6 +158,9 @@ a#add-playlist {
 /* Sidebar bottom */
 .sidebar-bottom {
     height: 100px;
+    /* Fisso la sezione */
+    position:fixed;
+    bottom:10vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
