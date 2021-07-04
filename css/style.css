@@ -47,11 +47,7 @@ aside.sidebar {
 
 }
 
-/* Effetto hover: bordo sinistro verde a comparsa, per ogni elemento li nella */
-/* aside.sidebar li:not(.no-hover) a:hover{
-    border-left: solid green 2px;
-} */
-
+/* Uso il selettore negativo per non selezionare il li "creaplaylist" */
 aside.sidebar li:hover:not(.no-hover) {
     border-left: solid green 2px;
 }
@@ -63,7 +59,7 @@ aside.sidebar li:hover:not(.no-hover) {
     height: calc(100% - 100px);
 }
 
-/* Nascondo il logo desktop di dwfault - MobileFirst*/
+/* Nascondo il logo desktop di default - MobileFirst*/
 .sidebar-top img.logo-desktop {
     display: none;
 }
@@ -110,7 +106,7 @@ aside.sidebar li:hover:not(.no-hover) {
 
 /* Icone menu */
 .sidebar .menu-top ul.main-menu a img,
-.sidebar-bottom > .profile > .avatar > img {
+.sidebar-bottom>.profile>.avatar>img {
     height: 26px;
     margin-right: 5px;
     opacity: 0.6;
@@ -142,7 +138,7 @@ aside.sidebar li:hover:not(.no-hover) {
 
 section.playlist {
     overflow: hidden;
-    min-height:600px;
+    min-height: 600px;
 }
 
 #add-playlist {
@@ -157,39 +153,54 @@ a#add-playlist {
 
 /* Sidebar bottom */
 .sidebar-bottom {
-    height: 100px;
+    min-height: 100px;
+    min-width: 250px;
+    background-color: #121212;
     /* Fisso la sezione */
-    position:fixed;
-    bottom:10vh;
+    position: fixed;
+    bottom: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     line-height: 35px;
     padding: 20px;
+    z-index: 999;
 }
 
+/* Immagine download */
 .sidebar-bottom>.download>a>img {
-    width: 20px;
+    width: 30px;
     vertical-align: middle;
- 
+
 }
 
 .sidebar-bottom>.download>a {
-    /* margin-left: 10px; */
-    color: rgba(255, 255, 255, 0.4);   
+    color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 
 }
 
-.sidebar-bottom > .profile {
-    display:flex;
+.sidebar-bottom>.download>a>span {
+    padding-left: 10px;
+}
+
+.sidebar-bottom>.profile>.avatar>img {
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 60%;
+    ;
+}
+
+.sidebar-bottom>.profile {
+    display: flex;
     align-items: center;
 }
 
-.sidebar-bottom > .profile > span {
-        color: rgba(255, 255, 255, 0.4);
+.sidebar-bottom>.profile>span {
+    color: rgba(255, 255, 255, 0.4);
+    padding-left: 10px;
 }
 
 /* /Sidebar */
@@ -209,7 +220,7 @@ a#add-playlist {
     width: calc(100% - 250px);
     display: block;
     flex: 1;
-    max-height: 90vh;
+    min-height: 90vh;
     position: absolute;
     top: 0;
     right: 0;
