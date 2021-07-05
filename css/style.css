@@ -256,7 +256,7 @@ footer {
     overflow: hidden;
     width: 100%;
     z-index: 999;
- 
+
 }
 
 #player {
@@ -361,7 +361,7 @@ ul.icon-list li {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .controller-time .time-min-song {
@@ -371,18 +371,39 @@ ul.icon-list li {
     text-align: center;
 }
 
-.controller-time .time-bar {
+.time-bar {
     width: 80%;
     height: 4px;
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.controller-time .time-bar-20-per {
+.time-bar-20-per {
     width: 20%;
     height: 4px;
     border-radius: 4px;
     background-color: white;
+}
+
+/* Music settings*/
+.music-settings {
+    width: 330px;
+    
+    padding: 10px;
+}
+
+.music-settings>ul.icon-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+li.volume {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
