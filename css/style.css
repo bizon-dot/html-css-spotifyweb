@@ -359,9 +359,9 @@ ul.icon-list li {
 
 .controller-time {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 70%;
+    
 }
 
 .controller-time .time-min-song {
