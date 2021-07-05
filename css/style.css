@@ -30,7 +30,6 @@ body {
     background-color: black;
 }
 
-
 /* /Generali */
 
 /* Sidebar */
@@ -67,19 +66,16 @@ body {
 /* Logo mobile / logo desktop */
 
 /* Main Menu */
-.sidebar .menu-top ul.main-menu,
-.sidebar .menu-top .playlist ul.playlist-menu {
+.sidebar .menu-top ul.main-menu {
     line-height: 35px;
 }
 
-.sidebar .menu-top ul.main-menu li,
-.sidebar .menu-top .playlist ul.playlist-menu li {
+.sidebar .menu-top ul.main-menu li {
     padding-left: 20px;
 }
 
 /* Formattazione testo menu */
-.sidebar .menu-top ul.main-menu a,
-.sidebar .menu-top .playlist ul.playlist-menu a{
+.sidebar .menu-top ul.main-menu a {
     text-decoration: none;
     font-size: 16px;
     word-break: break-all;
@@ -97,7 +93,7 @@ body {
 
 /* /Icone menu */
 
-.sidebar .menu-top .title {
+.sidebar .menu-top ul.main-menu .title {
     padding: 20px;
 }
 
@@ -118,7 +114,6 @@ body {
 }
 
 #add-playlist{
-    overflow-y: hidden;
     margin-left:20px;
     margin-bottom:10px;
 }
