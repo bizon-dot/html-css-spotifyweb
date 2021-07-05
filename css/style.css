@@ -21,6 +21,10 @@ body {
     clear: both;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Wrapper */
 .wrapper {
     display: flex;
@@ -39,7 +43,7 @@ body {
 aside.sidebar {
     width: 250px;
     /* Sottraggo la dimensione del footer */
-    height: calc(100% - 10vh);
+    height: calc(100% - 105px);
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -65,7 +69,7 @@ aside.sidebar li:hover:not(.no-hover) a {
     display: flex;
     flex-direction: column;
     /* Sottraggo la dimensione della sidebar-bottom */
-    height: calc(100% - 100px);
+    min-height: calc(100% - 100px);
 }
 
 /* Nascondo il logo desktop di default - MobileFirst*/
@@ -129,7 +133,22 @@ aside.sidebar li:hover:not(.no-hover) a {
     padding: 20px;
 }
 
+
+section.playlist {
+    /* Nascondo il testo in eccesso */
+    overflow: hidden;
+    min-height: 600px;
+}
+
+
 /* Pulsante crea playlist */
+#add-playlist {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
 #add-playlist:before {
     display: inline-block;
     width: 35px;
@@ -145,21 +164,6 @@ aside.sidebar li:hover:not(.no-hover) a {
 
 }
 
-section.playlist {
-    overflow: hidden;
-    min-height: 600px;
-}
-
-#add-playlist {
-    margin-left: 20px;
-    margin-bottom: 10px;
-}
-
-a#add-playlist {
-    color: white;
-    text-decoration: none;
-}
-
 /* Sidebar bottom */
 .sidebar-bottom {
     min-height: 100px;
@@ -173,7 +177,7 @@ a#add-playlist {
     justify-content: space-around;
     line-height: 35px;
     padding: 20px;
-    z-index: 999;
+    z-index: 200;
 }
 
 /* Immagine download */
@@ -184,14 +188,16 @@ a#add-playlist {
 }
 
 .sidebar-bottom>.download>a {
+
     color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .sidebar-bottom>.download>a>span {
+
     padding-left: 10px;
 }
 
@@ -199,7 +205,7 @@ a#add-playlist {
     width: 30px;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 60%;
-    ;
+
 }
 
 .sidebar-bottom>.profile {
@@ -208,6 +214,8 @@ a#add-playlist {
 }
 
 .sidebar-bottom>.profile>span {
+    display: flex;
+    align-items: center;
     color: rgba(255, 255, 255, 0.4);
     padding-left: 10px;
 }
@@ -227,9 +235,9 @@ a#add-playlist {
 
 .content {
     width: calc(100% - 250px);
+    height: 100%;
     display: block;
     flex: 1;
-    min-height: 90vh;
     position: absolute;
     top: 0;
     right: 0;
@@ -243,66 +251,140 @@ a#add-playlist {
 /* /Main */
 
 /* Footer */
+footer {
+    height: 104px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 999;
+ 
+}
 
-#player-commands {
-    /* height: 100%; */
-    min-height: 10vh;
+#player {
+    /* min-height: 10vh; */
+    height: 100%;
     display: flex;
-    /* flex-shrink: 1; */
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     background-color: #282828;
     z-index: 999;
 }
 
 /* Dimensioni sezioni footer */
 /* Sezione album-on-air */
-#player-commands a {
-    text-decoration: none;
-}
-#player-commands .album-on-air {
-    width: 350px;
+
+#player .album-on-air {
+    width: 250px;
     height: 100%;
     padding: 10px;
-}
-
-#player-commands .album-on-air {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+
+
 /* Contenitore Copertina album */
-#player-commands > .album-on-air > .cover-album {
+#player>.album-on-air>.cover-album {
     width: 20%;
 }
 
 
 /* Img copertina album */
-#player-commands > .album-on-air > .cover-album > img {
+#player>.album-on-air>.cover-album>img {
     width: 100%;
 }
 
-#player-commands > .album-on-air > .title-album > h2 > a {
+#player>.album-on-air>.title-album>h2>a {
     font-size: 16px;
     color: rgba(255, 255, 255, 1)
-
 }
 
-#player-commands > .album-on-air > .title-album > p > a {
+#player>.album-on-air>.title-album>p>a {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.4);
 
 }
 
-/* Icons */
-.far{
-    color:rgba(255, 255, 255, 0.4);
+/* Controllers */
+#player .controller {
+    width: 60%;
+
 }
 
-.fa-folder{
-    margin-left:10px;
+#player .controller ul.icon-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Formattazione */
+    list-style: none;
 }
+
+/* /Controllers */
+
+/* Icons */
+.far {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.fa-folder {
+    margin-left: 10px;
+}
+
+/* Controller-icon */
+.controller {
+    width: 40%;
+    height: 100%;
+}
+
+.controller-icon {
+    height: 60%;
+}
+
+ul.icon-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+    font-size: 18px;
+    line-height: 35px;
+
+}
+
+ul.icon-list li {
+    margin: 10px;
+    color: white;
+
+}
+
+.controller-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.controller-time .time-min-song {
+    width: 10%;
+    margin: 0 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.controller-time .time-bar {
+    width: 80%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.controller-time .time-bar-20-per {
+    width: 20%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+}
+
 
 
 /* Mediaquery */
