@@ -9,10 +9,12 @@
 main {
     /* Sottraggo la dimensione del footer */
     height: calc(100% - 100px);
+    /* background-color:#141922; */
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 .clearfix {
@@ -21,6 +23,7 @@ body {
     clear: both;
 }
 
+/* Tolgo lo stile ad ogni link */
 a {
     text-decoration: none;
 }
@@ -32,8 +35,32 @@ a {
     flex-direction: row;
     height: 90vh;
     overflow: hidden;
-    background-color: black;
+    /* background-color: black; */
 }
+
+/* Bottoni */
+/* Reset bottoni e formattazione testo */
+button {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+/* Bottone trasparente */
+
+.btn-transparent {
+    color: black;
+    font-weight: bolder;
+    border: solid 1px;
+    background-color: rgba(255, 99, 71, 0)
+}
+
+/* /Fine Bottone trasparente */
 
 
 /* /Generali */
@@ -110,7 +137,6 @@ aside.sidebar li:hover:not(.no-hover) a {
 /* Formattazione testo menu */
 .sidebar .menu-top ul.main-menu a,
 .sidebar .menu-top .playlist ul.playlist-menu a {
-    text-decoration: none;
     font-size: 16px;
     word-break: break-all;
     color: rgba(255, 255, 255, 0.5);
@@ -224,14 +250,14 @@ section.playlist {
 
 /* Main content */
 
-.wrapper-content {
+/* .wrapper-content {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
     position: relative;
     /* align-items: stretch; */
-}
+
 
 .content {
     width: calc(100% - 250px);
@@ -252,7 +278,7 @@ section.playlist {
 
 /* Footer */
 footer {
-    height: 104px;
+    min-height: calc(100% - 90vh);
     overflow: hidden;
     width: 100%;
     z-index: 999;
@@ -262,6 +288,7 @@ footer {
 #player {
     /* min-height: 10vh; */
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -339,7 +366,7 @@ footer {
 .controller-icon {
     height: 60%;
 }
-
+/* Liste icone generiche */
 ul.icon-list {
     display: flex;
     justify-content: center;
@@ -357,6 +384,9 @@ ul.icon-list li {
 
 }
 
+/* /Liste icone generiche */
+
+/* Minutaggio barra centrale */
 .controller-time {
     display: flex;
     justify-content: center;
@@ -371,6 +401,9 @@ ul.icon-list li {
     text-align: center;
 }
 
+/* /Minutaggio barra centrale */
+
+/* Barre */
 .time-bar {
     width: 80%;
     height: 4px;
@@ -385,19 +418,16 @@ ul.icon-list li {
     background-color: white;
 }
 
+/* /Barre */
+
 /* Music settings*/
 .music-settings {
     width: 330px;
-    
+    height:100%;
     padding: 10px;
 }
 
-.music-settings>ul.icon-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
+
 
 li.volume {
     width: 70%;
@@ -406,7 +436,25 @@ li.volume {
     justify-content: space-between;
 }
 
+/* Contenuto */
 
+/* call-to-action */
+
+.content > .row {
+    display: flex;
+    justify-content: flex-end;
+    background-color: (0, 0, 0, 0.4);
+}
+
+.content > .row > .call-to-action.upgrade > button.btn-transparent{
+    font-size:25px;
+    border-radius: 10%;
+    padding:30px;
+    margin-top: 30px;
+    margin-right:30px;
+}
+
+/* .call-to-action */
 
 /* Mediaquery */
 
