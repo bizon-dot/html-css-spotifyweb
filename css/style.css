@@ -47,10 +47,19 @@ aside.sidebar {
 
 }
 
+/* Hover */
 /* Uso il selettore negativo per non selezionare il li "creaplaylist" */
 aside.sidebar li:hover:not(.no-hover) {
     border-left: solid green 2px;
+
 }
+
+aside.sidebar li:hover:not(.no-hover) a {
+    color: white;
+
+}
+
+/* /hover */
 
 .sidebar-top {
     display: flex;
@@ -235,19 +244,66 @@ a#add-playlist {
 
 /* Footer */
 
-footer {
-    z-index: 999;
-}
-
-footer.commands {
+#player-commands {
     /* height: 100%; */
     min-height: 10vh;
     display: flex;
-    flex-shrink: 1;
+    /* flex-shrink: 1; */
+    justify-content: space-between;
+    align-items: center;
     background-color: #282828;
+    z-index: 999;
 }
 
-/* /Footer */
+/* Dimensioni sezioni footer */
+/* Sezione album-on-air */
+#player-commands a {
+    text-decoration: none;
+}
+#player-commands .album-on-air {
+    width: 350px;
+    height: 100%;
+    padding: 10px;
+}
+
+#player-commands .album-on-air {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Contenitore Copertina album */
+#player-commands > .album-on-air > .cover-album {
+    width: 20%;
+}
+
+
+/* Img copertina album */
+#player-commands > .album-on-air > .cover-album > img {
+    width: 100%;
+}
+
+#player-commands > .album-on-air > .title-album > h2 > a {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1)
+
+}
+
+#player-commands > .album-on-air > .title-album > p > a {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.4);
+
+}
+
+/* Icons */
+.far{
+    color:rgba(255, 255, 255, 0.4);
+}
+
+.fa-folder{
+    margin-left:10px;
+}
+
 
 /* Mediaquery */
 
