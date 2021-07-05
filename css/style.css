@@ -443,7 +443,7 @@ li.volume {
 .content > .row {
     display: flex;
     justify-content: flex-end;
-    background-color: (0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .content > .row > .call-to-action.upgrade > button.btn-transparent{
