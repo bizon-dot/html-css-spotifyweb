@@ -440,21 +440,54 @@ li.volume {
 
 /* call-to-action */
 
+
+.content {
+    width: calc(100% - 250px);
+    height: 100%;
+    display: block;
+    flex: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 250px;
+
+}
+
 .content > .row {
     display: flex;
     justify-content: flex-end;
+    height: 200px;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .content > .row > .call-to-action.upgrade > button.btn-transparent{
     font-size:25px;
+    color:white;
     border-radius: 10%;
     padding:30px;
     margin-top: 30px;
     margin-right:30px;
+    text-transform: uppercase;
 }
 
-/* .call-to-action */
+/* /.call-to-action */
+
+
+/* main-nav */
+
+.content > nav.content-nav{
+    text-transform: uppercase;
+    padding:10px;
+}
+
+.content > nav.content-nav > ul{
+    display:flex;
+    justify-content: space-around;
+}
+
+
+
 
 /* Mediaquery */
 
