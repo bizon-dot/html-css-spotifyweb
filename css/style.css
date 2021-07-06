@@ -9,6 +9,11 @@
 
 /* Main */
 
+body {
+    font-family: 'Montserrat', sans-serif;
+   
+}
+
 main {
     height: calc(100% - 90px);
     width: 100%;
@@ -88,10 +93,6 @@ button {
     height: 100vh;
     background-color: black;
 }
-
-
-
-
 
 /* Sidebar */
 
@@ -197,8 +198,8 @@ button {
 /* /Sidebar */
 
 /* Main */
-#content {
 
+#content {
     width: calc(100% - 250px);
     height: 100%;
     overflow-y: auto;
@@ -207,20 +208,20 @@ button {
 
 }
 
+/* Call-to-action */
 #content>.row {
     display: flex;
     justify-content: flex-end;
     height: 100px;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
+    line-height: 100px;
 
 }
 
 
-
 #content>.row>.call-to-action.upgrade>button.btn-transparent {
     font-size: 15px;
-
     border-radius: 10%;
     padding: 20px;
     margin-top: 30px;
@@ -228,6 +229,23 @@ button {
     text-transform: uppercase;
 }
 
+/* /Call-to-action */
+
+/* Content-navbar */
+/* main-nav */
+
+#content > nav.content-nav{
+    text-transform: uppercase;
+    padding:10px;
+}
+
+#content > nav.content-nav > ul{
+    display:flex;
+    justify-content: space-around;
+}
+
+
+/* /Content-navbar */
 /* /Main */
 
 /* Footer */
