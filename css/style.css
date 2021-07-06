@@ -267,25 +267,25 @@ button {
 
 /* /Content-navbar */
 
-/* Sezione riprodotti recentemente */
+/* Card album: Riprodotti recentemente / Create per JohnDoe / Consigliati */
 
-#recently-played.album-row {
+.album-row {
     margin: 20px;
    
 }
 
-#recently-played.album-row ul.album-list {
+.album-row ul.album-list {
     display: flex;
     margin: 20px 0;
 }
 
 /* Dimensione per ogni album */
-#recently-played.album-row ul.album-list li.card-album {
+.album-row ul.album-list li.card-album {
     width: calc(100% / 6 - 20px);
     margin-right: 20px;
 }
 
-#recently-played .img-album-container {
+.img-album-container {
     position: relative;
     display: flex;
     width: 100%;
@@ -293,19 +293,20 @@ button {
 
 }
 
-#recently-played .img-album-container img.cover-img {
+.img-album-container img.cover-img {
     max-width:80%;
 }
 
-#recently-played.album-row .text-album  {
+.album-row .text-album  {
     max-width: 80%;
     text-align: center;
 }
 
-#recently-played.album-row .text-album h3 {
+.album-row .text-album h3 {
     color: white;
+    padding: 10px;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 30px;
 }
 
 /* /Sezione riprodotti recentemente */
