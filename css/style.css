@@ -271,7 +271,7 @@ button {
 
 #recently-played.album-row {
     margin: 20px;
-
+   
 }
 
 #recently-played.album-row ul.album-list {
@@ -305,7 +305,7 @@ button {
 #recently-played.album-row .text-album h3 {
     color: white;
     font-size: 16px;
-    padding: 5px;
+    line-height: 16px;
 }
 
 /* /Sezione riprodotti recentemente */
@@ -314,7 +314,6 @@ button {
 /* Footer */
 
 #player {
-
     height: 120px;
     width: 100%;
     position: fixed;
@@ -386,7 +385,6 @@ ul.icon-list {
     justify-content: center;
     align-items: center;
     height: 100%;
-
     font-size: 18px;
     line-height: 35px;
 
