@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-   
+
 }
 
 main {
@@ -164,7 +164,6 @@ button {
 #sidebar .nav-bottom {
     min-height: 100px;
     min-width: 250px;
-    /* position: fixed; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -208,6 +207,12 @@ button {
 
 }
 
+/* H2 */
+
+#content h2 {
+    color: white;
+}
+
 /* Call-to-action */
 #content>.row {
     display: flex;
@@ -234,28 +239,76 @@ button {
 /* Content-navbar */
 /* main-nav */
 
-#content > nav.content-nav{
+#content>nav.content-nav {
     text-transform: uppercase;
-    padding:10px;
+    padding: 10px;
 }
 
-#content > nav.content-nav > ul{
-    width:80%;
+#content>nav.content-nav>ul {
+    width: 80%;
     margin: 0 auto;
-    display:flex;
+    display: flex;
     justify-content: space-around;
+    /* !Adattabilità della navbar */
     flex-wrap: wrap;
     white-space: nowrap;
 }
 
-#content > nav.content-nav > ul > li:hover{
+
+#content>nav.content-nav>ul>li {
     padding-bottom: 10px;
+
+}
+
+#content>nav.content-nav>ul>li:hover {
     border-bottom: solid green 2px;
 
 }
 
-
 /* /Content-navbar */
+
+/* Sezione riprodotti recentemente */
+
+#recently-played.album-row {
+    margin: 20px;
+
+}
+
+#recently-played.album-row ul.album-list {
+    display: flex;
+    margin: 20px 0;
+}
+
+/* Dimensione per ogni album */
+#recently-played.album-row ul.album-list li.card-album {
+    width: calc(100% / 6 - 20px);
+    margin-right: 20px;
+}
+
+#recently-played .img-album-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+#recently-played .img-album-container img.cover-img {
+    max-width:80%;
+}
+
+#recently-played.album-row .text-album  {
+    max-width: 80%;
+    text-align: center;
+}
+
+#recently-played.album-row .text-album h3 {
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* /Sezione riprodotti recentemente */
 /* /Main */
 
 /* Footer */
