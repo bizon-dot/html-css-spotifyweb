@@ -240,8 +240,18 @@ button {
 }
 
 #content > nav.content-nav > ul{
+    width:80%;
+    margin: 0 auto;
     display:flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    white-space: nowrap;
+}
+
+#content > nav.content-nav > ul > li:hover{
+    padding-bottom: 10px;
+    border-bottom: solid green 2px;
+
 }
 
 
