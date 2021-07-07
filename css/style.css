@@ -271,7 +271,13 @@ button {
 
 .album-row {
     margin: 20px;
-   
+
+}
+
+/* Sottotitolo */
+.album-row p{
+    padding-top: 10px;
+    color: gray;
 }
 
 .album-row ul.album-list {
@@ -294,10 +300,10 @@ button {
 }
 
 .img-album-container img.cover-img {
-    max-width:80%;
+    max-width: 80%;
 }
 
-.album-row .text-album  {
+.album-row .text-album {
     max-width: 80%;
     text-align: center;
 }
@@ -307,6 +313,12 @@ button {
     padding: 10px;
     font-size: 16px;
     line-height: 30px;
+}
+
+/* Most popular - immagini circolari */
+
+#most-popular img{
+    border-radius: 50%;
 }
 
 /* /Sezione riprodotti recentemente */
@@ -448,3 +460,12 @@ li.volume {
 }
 
 /* /Footer */
+
+
+/* Media query */
+
+@media  screen and (min-width: 600px) {
+    .album-row ul.album-list {
+        flex-wrap:wrap;
+    }
+}
